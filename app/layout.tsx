@@ -37,7 +37,7 @@ export default function RootLayout({
       <html lang="vi">
         <body>
             <div className="w-7/8 m-auto text-[1.2em]">
-              <header className="bg-amber-200 h-[120px] relative "> <Header></Header> </header>
+              <header className="h-[120px] relative "> <Header></Header> </header>
               <nav className="bg-lime-500 h-[60px]"> <ThanhMenu></ThanhMenu> </nav>
               <main className="min-h-[300px]  bg-emerald-100"> {children} </main>
               <footer className="bg-stone-950 text-white text-center p-[10px]">

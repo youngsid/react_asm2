@@ -1,13 +1,16 @@
 export default function Header() {
     return (
-    <div className="">
-        <div className="absolute left-5 top-8 text-4xl font-bold">
-            STREETSOUL STORE
-        </div>
-        <span className="absolute top-3 right-3 font-bold">
-            Tuấn Nhi - PS40510
-        </span>
-        {/* <b className="absolute bottom-3 right-3">Giỏ hàng</b> */}
-    </div>
+        <header className="relative bg-gray-900 text-white py-4 px-6 rounded-b-lg shadow-lg h-[100px]">
+            <div className="flex justify-between items-center">
+                {/* Logo / Tên store */}
+                <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide">
+                    STREETSOUL STORE
+                </h1>
+                {/* Tên người dùng */}
+                <span className="text-sm md:text-base font-semibold bg-gray-700 px-3 py-1 rounded-lg shadow">
+                    Tuấn Nhi - PS40510
+                </span>
+            </div>
+        </header>
     );
 }
