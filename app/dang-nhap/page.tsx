@@ -1,4 +1,3 @@
-// == Lab 7 == -- Đăng nhập
 'use client';
 import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
@@ -43,25 +42,43 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleLogin} className="w-[50%] mx-auto border p-6 rounded-lg shadow-md bg-white">
-      <h2 className="text-center text-xl font-bold bg-yellow-400 text-black p-3 rounded">🔑 Đăng nhập</h2>
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-gray-800 to-gray-900 p-6">
+      <form onSubmit={handleLogin} className="w-full max-w-md bg-gray-800 p-8 rounded-2xl shadow-2xl space-y-6">
+        <h2 className="text-center text-3xl font-extrabold text-yellow-500 mb-4">🔑 Đăng nhập</h2>
 
-      <div className="my-3">
-        <label className="block font-semibold">📧 Email:</label>
-        <input type="email" ref={emailRef} className="w-full border p-2 rounded focus:ring-2 focus:ring-yellow-400" />
-      </div>
+        <div className="my-4">
+          <label className="block text-lg font-semibold text-gray-300">📧 Email:</label>
+          <input
+            type="email"
+            ref={emailRef}
+            className="w-full p-4 mt-2 rounded-xl border-2 border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-gray-700 text-white placeholder-gray-400"
+            placeholder="Nhập email của bạn"
+          />
+        </div>
 
-      <div className="my-3">
-        <label className="block font-semibold">🔒 Mật khẩu:</label>
-        <input type="password" ref={matkhauRef} className="w-full border p-2 rounded focus:ring-2 focus:ring-yellow-400" />
-      </div>
+        <div className="my-4">
+          <label className="block text-lg font-semibold text-gray-300">🔒 Mật khẩu:</label>
+          <input
+            type="password"
+            ref={matkhauRef}
+            className="w-full p-4 mt-2 rounded-xl border-2 border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-gray-700 text-white placeholder-gray-400"
+            placeholder="Nhập mật khẩu của bạn"
+          />
+        </div>
 
-      <div className="my-4 text-center">
-        <button type="submit" className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">
-          🔑 Đăng nhập
-        </button>
-        <p ref={thongbaoRef} className="text-red-500 font-bold mt-2"></p>
-      </div>
-    </form>
+        <div className="text-center">
+          <button
+            type="submit"
+            className="w-full py-3 bg-yellow-500 text-black font-bold rounded-xl hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Đăng nhập
+          </button>
+        </div>
+
+        <div className="text-center">
+          <p ref={thongbaoRef} className="text-red-500 font-bold mt-4"></p>
+        </div>
+      </form>
+    </div>
   );
 }
